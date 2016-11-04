@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-				This is my web site. Holy shit
+				This is my web site. Holy shit. Fuck you
 </body>
 </html>
