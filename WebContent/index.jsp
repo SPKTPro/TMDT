@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-				This is my web site. Holy shit. v123
+				
 </body>
 </html>
