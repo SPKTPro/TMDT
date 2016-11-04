@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-1 2 3 5 anh co danh roi nhip nao khong
+1
 </body>
 </html>
