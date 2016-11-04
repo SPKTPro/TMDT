@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-		anh yeu em nhieu
+		anh yeu em
 </body>
 </html>
