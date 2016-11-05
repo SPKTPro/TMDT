@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
@@ -8,14 +9,15 @@
 </head>
 <body>
 	<header>
-    	<a href="index.html" class="logo" name="logo">
+    	<a href="index.jsp" class="logo" name="logo">
         	<img src="images/logo.png" alt="" />
         </a>
         <div class="main-menu">
         	<ul class="group-menu">
-            	<li class="active" ><a href="index.html">Trang Chủ</a></li>
-                <li class="all-work" ><a href="allwork.html">Tất cả việc làm</a></li>
-                <li class="contact" ><a href="contact.html">Liên Hệ</a></li>
+            <li class="active" ><a href="index.jsp">Trang Chủ</a></li>
+                <li class="all-work" ><a href="allwork.jsp">Tất cả việc làm</a></li>
+                <li class="contact" ><a href="contact.jsp">Liên Hệ</a></li>
+                <li class="postwork" ><a href="postwork.jsp">Đăng việc làm</a></li>
             </ul>      	
         </div>
         <!-- end main menu -->
@@ -23,13 +25,13 @@
         	<ul>
             	<li id="login">
                 	<img class="icon-login" src="images/icon_login.png" ></img>
-                    <a href="login.html" >
+                    <a href="login.jsp" >
                     	<span class="login">Đăng Nhập</span>
                     </a>
                 </li>
                 <li id="register">
                     <img class="icon-register" src="images/icon_register.png"></img>
-                    <a href="register.html" >
+                    <a href="register.jsp" >
                     	<span class="register">Đăng Ký</span>
                     </a>
                 </li>
@@ -85,11 +87,11 @@
         <div id="work-today">
         	<div class="container">
             	<h3><b>Word-Today</b></h3>
-             		<a href="#">
+             		<a href="workdetail.jsp">
                         <div class="work">                       
                                 <div class="work-picture"><img alt="#" src="images/work-1.jpg" /></div>
                                 <div class="work-info">
-                                    <h4 class="work-title"><a href="#"> Title</a></h4>									                                     <p class="time">Thoi gian dang</p>
+                                    <h4 class="work-title"><a href="workdetail.jsp"> Title</a></h4>									                                     <p class="time">Thoi gian dang</p>
                                     <p><i>Mo ta ngan gon cong viec ...</i></p>
                                 </div> 
                         </div>
@@ -180,7 +182,7 @@
         <!-- end banner quang cao -->
     </main>
     <!-- end main -->
-    <footer>    	
+    <footer>
     	<div class="container">
         	<div class="spac"></div>
             <div class="container-lienhe">
