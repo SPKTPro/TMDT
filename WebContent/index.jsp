@@ -15,6 +15,8 @@
 	<%@ page import="java.sql.*"%>
 	<%@ page import="javax.sql.*"%>
 	<%@page import="java.util.Date"%>
+	<%@page import="java.text.DateFormat" %>
+	<%@page import = "java.text.SimpleDateFormat" %>
 	<%
 		String Username = session.getAttribute("tenUser").toString();
 	%>
@@ -118,9 +120,10 @@
 				conn = DriverManager.getConnection(connectionURL, "root", "");
 				Statement sta = conn.createStatement();
 
+				DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+				Date date = new Date();	
 				ResultSet rs;
-
-				rs = sta.executeQuery("select * from work");
+				rs = sta.executeQuery("select * from work where work_date_do ="+dateFormat.format(date));
 				//get username to show
 				while (rs.next()) {
 					out.println("<a href=" + '"' + "workdetail.jsp?work_ID=" + rs.getInt("ID_work") + '"' + '>');
