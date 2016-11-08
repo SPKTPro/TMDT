@@ -9,6 +9,10 @@
 </head>
 
 <body>
+
+<%
+	String Work_ID = request.getParameter("work_ID").toString();
+%>
 	<header>
     	<a href="index.jsp" class="logo" name="logo">
         	<img src="images/logo.png" alt="" />
