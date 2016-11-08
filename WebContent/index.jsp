@@ -15,10 +15,29 @@
 	<%@ page import="java.sql.*"%>
 	<%@ page import="javax.sql.*"%>
 	<%@page import="java.util.Date"%>
-	<%@page import="java.text.DateFormat" %>
-	<%@page import = "java.text.SimpleDateFormat" %>
+	<%@page import="java.text.DateFormat"%>
+	<%@page import="java.text.SimpleDateFormat"%>
 	<%
-		String Username = session.getAttribute("tenUser").toString();
+		String Username = null;
+		int index = 0;
+		int sum = 0;
+		try {
+			Username = session.getAttribute("tenUser").toString();
+
+		} catch (Exception e) {
+			Username = "Guest";
+
+		}
+
+		try {
+			index = Integer.parseInt(request.getParameter("index").toString());
+			sum = Integer.parseInt(request.getParameter("sum").toString());
+
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+			index = 0;
+
+		}
 	%>
 	<header> <a href="index.jsp" class="logo" name="logo"> <img
 		src="images/logo.png" alt="" />
@@ -121,21 +140,64 @@
 				Statement sta = conn.createStatement();
 
 				DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-				Date date = new Date();	
-				ResultSet rs;
-				rs = sta.executeQuery("select * from work where work_date_do ="+dateFormat.format(date));
+				Date date = new Date();
+				ResultSet rs = null;
+				String query = "";
+
+				if (index == 0) {
+					query = "select * from work where work_date_do =" + "'" + dateFormat.format(date) + "'";
+					rs = sta.executeQuery(query);
+					rs.last();
+					sum = rs.getRow();
+
+					query = "select * from work where work_date_do =" + "'" + dateFormat.format(date) + "'" + " limit 0, 8";
+					rs = sta.executeQuery(query);
+
+				} else {
+
+					int start = (index - 1) * 8;
+					query = "select * from work where work_date_do =" + "'" + dateFormat.format(date) + "'" + " limit "
+							+ start + ", 8";
+					rs = sta.executeQuery(query);
+				}
+
 				//get username to show
 				while (rs.next()) {
 					out.println("<a href=" + '"' + "workdetail.jsp?work_ID=" + rs.getInt("ID_work") + '"' + '>');
-					out.println("<div class=" + '"' + "work" + '"' + ">	<img alt=" + '"' + '"' + "src=" + '"'
-							+ "images/work-1.jpg" + '"' + "/> </div>");
+					out.println("<div class=" + '"' + "work" + '"' + "> <div class=" + '"' + "work-picture" + '"'
+							+ "><img alt=" + '"' + '"' + "src=" + '"' + "images/work-1.jpg" + '"' + "/> </div>");
 
-					out.println("<div class=" + '"' + "work-info" + '"' + "> <h4 class="+'"'+"work-title"+'"'+"> </h4>");
-					out.println("<p class="+'"'+"time"+'"'+">"+ rs.getDate("work_date_create")+
-							"</p><p>	<i>"+ rs.getString("work_description")+"</i>	</p></div></div>");
+					out.println("<div class=" + '"' + "work-info" + '"' + "> <h4 class=" + '"' + "work-title" + '"'
+							+ "><a href=" + '"' + "workdetail.jsp?work_ID=" + rs.getInt("ID_work") + '"' + '>'
+							+ rs.getString("work_title") + "</a> </h4>");
+					out.println("<p class=" + '"' + "time" + '"' + ">" + "Thời gian đăng: " + rs.getDate("work_date_create")
+							+ "</p><p>	<i>" + "Mô tả công việc" + rs.getString("work_description")
+							+ "</i> </p></div></div> </a>");
 				}
-			%>			
+			%>
 		</div>
+
+
+		<div class="pagination">
+			<div class="container">
+				<%
+					int tmpSum = sum;
+					int i = 1;
+					while (tmpSum > 0) {
+						out.println("<a href=" + '"' + "index.jsp?index=" + i + "&sum=" + sum + '"' + " class=" + '"' + "page"
+								+ '"' + '>' + i + "</a>");
+						tmpSum = tmpSum - 8;
+						i++;
+					}
+				%>
+
+
+			</div>
+		</div>
+
+
+
+
 
 	</div>
 	<!-- end work-today -->

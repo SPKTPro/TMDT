@@ -16,6 +16,8 @@
 	<%@page import="java.util.Date"%>
 	<%
 		String Work_ID = request.getParameter("work_ID").toString();
+	
+	
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = null;
 		String connectionURL = "jdbc:mysql://localhost:3306/tmdt";
