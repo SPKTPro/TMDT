@@ -28,14 +28,14 @@
 		String Diadiem = null;
 		Date thoigianlam = null;
 		String sdt = null, email = null;
-		rs = sta.executeQuery("select * from work,user  where ID_work=" + Work_ID+"and work.work_user_id = user.id_user");
+		rs = sta.executeQuery("select * from work,user  where ID_work=" + Work_ID+" and work.work_user_id = user.id_user");
 		if (rs.next()) {
 			thoigiandang = rs.getDate("work_date_create");
 			thoigianlam = rs.getDate("work_date_do");
 			motacongviec = rs.getString("work_description");
 			Diadiem = rs.getString("work_location");
 			sdt = rs.getString("work_phone");
-			email = rs.getString("work_email");
+			email = rs.getString("email");
 			work_title = rs.getString("work_title");
 		}
 	%>
