@@ -134,12 +134,7 @@
 					out.println("<p class="+'"'+"time"+'"'+">"+ rs.getDate("work_date_create")+
 							"</p><p>	<i>"+ rs.getString("work_description")+"</i>	</p></div></div>");
 				}
-			%>
-
-
-
-
-			
+			%>			
 		</div>
 
 	</div>
