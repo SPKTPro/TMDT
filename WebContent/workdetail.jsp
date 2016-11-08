@@ -28,7 +28,7 @@
 		String Diadiem = null;
 		Date thoigianlam = null;
 		String sdt = null, email = null;
-		rs = sta.executeQuery("select * from work  where ID_work=" + Work_ID);
+		rs = sta.executeQuery("select * from work,user  where ID_work=" + Work_ID+"and work.work_user_id = user.id_user");
 		if (rs.next()) {
 			thoigiandang = rs.getDate("work_date_create");
 			thoigianlam = rs.getDate("work_date_do");
