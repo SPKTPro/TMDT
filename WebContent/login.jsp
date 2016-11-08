@@ -13,7 +13,7 @@
     	<div class="container-login">
         	<div class="title">Đăng nhập</div>
             <div class="frm-login">
-                <form method="post" action="#" name="frm-login" >
+                <form method="post" action="LoginServlet" name="frm-login" >
                     <label>Tên đăng nhập</label><br />
                     <input type="text" name="txtuser" value="" placeholder="username" /><br />
                     <label>Mật khẩu</label><br />
