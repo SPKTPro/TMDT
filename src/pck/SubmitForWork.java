@@ -43,7 +43,8 @@ public class SubmitForWork extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		int work_ID = Integer.parseInt(request.getParameter("country"));
-		RequestDispatcher rd = request.getRequestDispatcher("workdetail.jsp");
+		
+		RequestDispatcher rd = request.getRequestDispatcher("ThankforSubmit.jsp");
 		rd.include(request,response); 
 
 	}

@@ -140,7 +140,7 @@
 				Statement sta = conn.createStatement();
 
 				DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-				Date date = new Date();
+				Date date = new Date("2016/11/08");
 				ResultSet rs = null;
 				String query = "";
 
