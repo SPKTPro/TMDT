@@ -16,6 +16,12 @@
 		} catch (Exception e) {
 			From = "login";
 		}
+		String WordID = null;
+		try {
+			WordID = request.getParameter("workID").toString();
+		} catch (Exception e) {
+
+		}
 	%>
 
 
@@ -24,12 +30,14 @@
 			<div class="title">Đăng nhập</div>
 			<div class="frm-login">
 				<form method="post" action="LoginServlet" name="frm-login">
-					<label>Tên đăng nhập</label><br />
-					 <input type="text"	name="txtuser" value="" placeholder="username" /><br /> 
-					 <label>Mật	khẩu</label><br />
-					  <input type="password" name="txtpass" value="" placeholder="password" /><br />
-					  <input type="hidden" name="from" value="<%=From%>" />			 
-					  <input class="sm-login" type="submit" name="sm-login" value="Đăng nhập" />
+					<label>Tên đăng nhập</label><br /> <input type="text"
+						name="txtuser" value="" placeholder="username" /><br /> <label>Mật
+						khẩu</label><br /> <input type="password" name="txtpass" value=""
+						placeholder="password" /><br /> <input type="hidden" name="from"
+						value="<%=From%>" /> 
+						<input type="hidden" name="work_ID" value="<%=WordID%>" /> 
+						<input class="sm-login" type="submit"
+						name="sm-login" value="Đăng nhập" />
 				</form>
 			</div>
 			<a href="#"><i>Quên mật khẩu ?</i></a><br /> <a href="register.jsp"><i>Tạo

@@ -34,7 +34,18 @@ public class Login extends HttpServlet {
 			if (from.equals("postword")) {
 				RequestDispatcher rd = request.getRequestDispatcher("postwork.jsp");
 				rd.forward(request, response);
-			} else {
+				
+				
+				
+				
+			}else if(from.equals("submitWork"))
+			{
+				String work_ID = request.getParameter("work_ID");
+				RequestDispatcher rd = request.getRequestDispatcher("workdetail.jsp?work_ID="+work_ID);
+				rd.forward(request, response);
+			}
+			
+			else {
 				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 				rd.forward(request, response);
 			}

@@ -165,7 +165,8 @@
 				while (rs.next()) {
 					out.println("<a href=" + '"' + "workdetail.jsp?work_ID=" + rs.getInt("ID_work") + '"' + '>');
 					out.println("<div class=" + '"' + "work" + '"' + "> <div class=" + '"' + "work-picture" + '"'
-							+ "><img alt=" + '"' + '"' + "src=" + '"' + "images/work-1.jpg" + '"' + "/> </div>");
+							+ "><img alt=" + '"' + '"' + "src=" + '"' 
+							+ "http://localhost:8080/TMDT/getImage?id="+ rs.getInt("ID_work") + '"' + "/> </div>");
 
 					out.println("<div class=" + '"' + "work-info" + '"' + "> <h4 class=" + '"' + "work-title" + '"'
 							+ "><a href=" + '"' + "workdetail.jsp?work_ID=" + rs.getInt("ID_work") + '"' + '>'

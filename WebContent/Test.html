@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" type="text/css" rel="stylesheet"
+	media="screen" />
+<title></title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+	<header> <a href="index.jsp" class="logo" name="logo"> <img
+		src="images/logo.png" alt="" />
+	</a>
+	<div class="main-menu">
+		<ul class="group-menu">
+			<li class="active"><a href="index.jsp">Trang Chủ</a></li>
+			<li class="all-work"><a href="allwork.jsp">Tất cả việc làm</a></li>
+			<li class="contact"><a href="contact.jsp">Liên Hệ</a></li>
+			<li class="postwork"><a href="postwork.jsp">Đăng việc làm</a></li>
+		</ul>
+	</div>
+	<!-- end main menu -->
+	<div id="confirm">
+		<ul>
+
+
+			<li id="login"><img class="icon-login"
+				src="images/icon_login.png"></img>
+				<h1>Welcome Guest</h1></li>
+
+
+			<li id="login"><img class="icon-login"
+				src="images/icon_login.png"></img> <a href="login.jsp"> <span
+					class="login">Đăng Nhập</span>
+			</a></li>
+			<li id="register"><img class="icon-register"
+				src="images/icon_register.png"></img> <a href="register.jsp"> <span
+					class="register">Đăng Ký</span>
+			</a></li>
+		</ul>
+	</div>
+	<!-- end confirm -->
+	<div class="search">
+		<form action="#" method="get" name="search-frm">
+			<input type="text" value="" name="txt-search"
+				placeholder="Enter your search..." /> <input type="submit" value=""
+				name="sm-search" /> <span class="icon-search"></span>
+		</form>
+	</div>
+	<!-- end search -->
+	<div class="duongke"></div>
+	<div class="slider">
+		<a class="item" href="#"><img src="#" alt="" /></a> <a class="item"
+			href="#"><img src="#" alt="" /></a> <a class="item" href="#"><img
+			src="#" alt="" /></a> <a class="item" href="#"><img src="#" alt="" /></a>
+	</div>
+
+	</header>
+	<div class="duongke"></div>
+	<!-- end header -->
+	<main>
+	<div id="filter">
+		<div class="container">
+			<div id="diadiem">
+				<h4>Địa Điểm</h4>
+				<select class="choose-city">
+					<option class="HCM" value="Tp.Hồ Chí Minh">Tp. Hồ Chí Minh
+					</option>
+					<option class="HN" value="Hà Nội">Hà Nội</option>
+					<option class="PT" value="Tp.Phan Thiết">Tp.Phan Thiết</option>
+				</select>
+				<div class="quan">
+					<label><input type="checkbox" name="q/h" value="" />Quan 1</label>
+				</div>
+			</div>
+			<div id="luong">
+				<h4>Lương</h4>
+				<label><input type="checkbox" name="luong" value="" />200-300</label>
+			</div>
+			<div id="thoigian">
+				<h4>Thời Gian</h4>
+				<label>Thời gian bắt đầu<input type="date" name="date-str" /></label>
+				<label>Thời gian kết thúc<input type="date" name="date-end" /></label>
+			</div>
+		</div>
+	</div>
+	<!--end filter-->
+	<div id="work-today">
+		<div class="container">
+			<h3>
+				<b>Word-Today</b>
+			</h3>
+
+			<a href="workdetail.jsp?work_ID=1">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=1" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=1">dkm vl</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc1</i>
+						</p>
+					</div>
+				</div>
+			</a>
+			 <a href="workdetail.jsp?work_ID=2">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=2" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=2">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc2</i>
+						</p>
+					</div>
+				</div>
+			</a> <a href="workdetail.jsp?work_ID=3">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=3" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=3">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc3</i>
+						</p>
+					</div>
+				</div>
+			</a> <a href="workdetail.jsp?work_ID=4">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=4" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=4">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc4</i>
+						</p>
+					</div>
+				</div>
+			</a> <a href="workdetail.jsp?work_ID=5">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=5" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=5">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc5</i>
+						</p>
+					</div>
+				</div>
+			</a> <a href="workdetail.jsp?work_ID=6">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=6" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=6">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc6</i>
+						</p>
+					</div>
+				</div>
+			</a> <a href="workdetail.jsp?work_ID=7">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=7" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=7">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc7</i>
+						</p>
+					</div>
+				</div>
+			</a> <a href="workdetail.jsp?work_ID=8">
+				<div class="work">
+					<div class="work-picture">
+						<img alt="" src="http://localhost:8080/TMDT/getImage?id=8" />
+					</div>
+					<div class="work-info">
+						<h4 class="work-title">
+							<a href="workdetail.jsp?work_ID=8">Lam test</a>
+						</h4>
+						<p class="time">Thời gian đăng: 2016-11-08</p>
+						<p>
+							<i>Mô tả công việc8</i>
+						</p>
+					</div>
+				</div>
+			</a>
+
+		</div>
+
+
+		<div class="pagination">
+			<div class="container">
+				<a href="index.jsp?index=1&sum=116" class="page">1</a> <a
+					href="index.jsp?index=2&sum=116" class="page">2</a> <a
+					href="index.jsp?index=3&sum=116" class="page">3</a> <a
+					href="index.jsp?index=4&sum=116" class="page">4</a> <a
+					href="index.jsp?index=5&sum=116" class="page">5</a> <a
+					href="index.jsp?index=6&sum=116" class="page">6</a> <a
+					href="index.jsp?index=7&sum=116" class="page">7</a> <a
+					href="index.jsp?index=8&sum=116" class="page">8</a> <a
+					href="index.jsp?index=9&sum=116" class="page">9</a> <a
+					href="index.jsp?index=10&sum=116" class="page">10</a> <a
+					href="index.jsp?index=11&sum=116" class="page">11</a> <a
+					href="index.jsp?index=12&sum=116" class="page">12</a> <a
+					href="index.jsp?index=13&sum=116" class="page">13</a> <a
+					href="index.jsp?index=14&sum=116" class="page">14</a> <a
+					href="index.jsp?index=15&sum=116" class="page">15</a>
+
+
+
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+	<!-- end work-today -->
+	<div id="banner-adver">
+		<div class="container"></div>
+	</div>
+	<!-- end banner quang cao --> </main>
+	<!-- end main -->
+	<footer>
+	<div class="container">
+		<div class="spac"></div>
+		<div class="container-lienhe">
+			<div class="lienhe">
+				<h4 class="title">Liên Hệ</h4>
+				<span class="tiento">[T]</span>
+				<p>0962118094 - 01648901848</p>
+				<span class="tiento">[E]</span>
+				<p>vinhpham10011@gmail.com</p>
+			</div>
+		</div>
+		<div class="container-link">
+			<div class="link-relation">
+				<h4 class="title">Link chủ để liên quan</h4>
+				<ul class="link" style="list-style-image: url(images/circle.png)">
+					<li><a href="https://vieclam24h.vn/">https://vieclam24h.vn/</a></li>
+					<li><a href="https://www.timviecnhanh.com/">https://www.timviecnhanh.com/</a></li>
+					<li><a
+						href="https://www.facebook.com/search/105330846199017/local_search?surface=tyah">https://www.facebook.com/</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</footer>
+	<!-- end footer -->
+</body>
+</html>
